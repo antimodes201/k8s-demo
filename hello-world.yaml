@@ -19,9 +19,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: helloworld-deployment
-  labels:
-    app: helloworld
 spec:
+  selector:
+    matchLabels:
+      app: helloworld
   replicas: 1
   template:
     metadata:
